@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- html2canvas -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+
+
+    <link rel="stylesheet" href="login-ataoja.css">
+    
+    <title>School Result Checker</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Result Checker</h1>
+        <label for="fullName">Enter Full Name:</label>
+        <input type="text" id="fullName" placeholder="Enter full name">
+
+        <!-- Add this to your HTML file where the form is located -->
+<label for="classDropdown">Select Class:</label>
+<select id="classDropdown">
+    <optgroup label="SSS 1">
+        <option value="SSS 1A">SSS 1A</option>
+        <option value="SSS 1B">SSS 1B</option>
+        <option value="SSS 1C">SSS 1C</option>
+        <option value="SSS 1D">SSS 1D</option>
+        <option value="SSS 1E">SSS 1E</option>
+        <option value="SSS 1F">SSS 1F</option>
+        <option value="SSS 1G">SSS 1G</option>
+        <option value="SSS 1H">SSS 1H</option>
+    </optgroup>
+    <optgroup label="SSS 2">
+        <option value="SSS 2A">SSS 2A</option>
+        <option value="SSS 2B">SSS 2B</option>
+        <option value="SSS 2C">SSS 2C</option>
+        <option value="SSS 2D">SSS 2D</option>
+        <option value="SSS 2E">SSS 2E</option>
+        <option value="SSS 2F">SSS 2F</option>
+        <option value="SSS 2G">SSS 2G</option>
+        <option value="SSS 2H">SSS 2H</option>
+    </optgroup>
+    <optgroup label="SSS 3">
+        <option value="SSS 3A">SSS 3A</option>
+        <option value="SSS 3B">SSS 3B</option>
+        <option value="SSS 3C">SSS 3C</option>
+        <option value="SSS 3D">SSS 3D</option>
+        <option value="SSS 3E">SSS 3E</option>
+        <option value="SSS 3F">SSS 3F</option>
+        <option value="SSS 3G">SSS 3G</option>
+        <option value="SSS 3H">SSS 3H</option>
+    </optgroup>
+</select>
+
+        <label for="passkey">Enter Passkey:</label>
+        <input type="password" id="passkey" placeholder="Enter passkey">
+
+        <button onclick="checkResult()">Check Result</button>
+
+        <div id="resultContainer" style="display: none; background-color: white;">
+           <img src="asos-logo.png" width="200px" height="100px"> <th>
+            <h2>Ataoja School of Science, Osogbo</h2> </th>
+            <p id="reportName">Ataoja School of Science, Osogbo</p>
+            <p id="expectedName"></p>
+            <p id="expectedClass"></p>
+
+            <table id="resultTable">
+                <thead>
+                    <tr>
+                        <th>Subjects</th>
+                        <th>1st C A</th>
+                        <th>2nd C A</th>
+                        <th>3rd C A</th>
+                        <th>Exam</th>
+                        <th>Total</th>
+                        <th>Grade</th>
+                        <th>Remarks</th>
+                    </tr>
+                </thead>
+                <tbody id="resultBody">
+                    <!-- Result rows will be added dynamically here -->
+                </tbody>
+            </table>
+
+            <p id="percentage"></p>
+
+            <p id="principalComment"></p>
+            <p id="classTeacherComment">Class Teacher's Comment: _CLASS TEACHER'S COMMENT_</p>
+            <br>
+            
+            <i>
+                <center>
+                <b>
+                    <font color="red">This eReport Card is authorized by the ASOS Management</font>
+                </b>
+
+                </center>
+            </i>
+            <br>
+            <center>
+                <b>Powered By:</b> <u>Okechukwu Nwaozor</u>
+                <br>
+                &copy; Copyright OkeyMeta 2024
+            </center>
+            
+        </div>
+    </div>
+
+
+
+    <script src="sss-result.js"></script>
+    
+
+    <!-- index.html -->
+
+<!-- Add this line to include the new JavaScript file -->
+<script src="saveResult.js"></script>
+
+</body>
+</html>
